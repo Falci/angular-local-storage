@@ -27,7 +27,10 @@
     "Gruntfile.js"
   ],
   "devDependencies": {
-    "angular": "~1.x",
-    "angular-mocks": "~1.2.1"
+    "angular": "~1.4.0",
+    "angular-mocks": "~1.4.0"
+  },
+  "resolutions": {
+    "angular": "1.4.3"
   }
 }
