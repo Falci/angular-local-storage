@@ -270,6 +270,15 @@ describe('localStorageService', function() {
     )
   });
 
+  it('should be able to set and get objects contains date - issue #241', function() {
+    var t = {x: new Date(946684800000)}; // 2000-JAN-01 00:00:00
+    inject(
+      addItem('key', t),
+      expectAdding('ls.key', angular.toJson(t)),
+      expectMatching('key', t)
+    );
+  });
+
   it('should be able to get items', inject(
     getItem('key'),
     expectGetting('ls.key')
